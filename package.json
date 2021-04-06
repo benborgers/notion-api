@@ -1,0 +1,16 @@
+{
+  "name": "notion-api",
+  "version": "1.0.0",
+  "description": "An API client for Notion.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Ben Borgers",
+  "license": "ISC",
+  "dependencies": {
+    "katex": "^0.13.1",
+    "node-fetch": "^2.6.1",
+    "prismjs": "^1.23.0"
+  }
+}
