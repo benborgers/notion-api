@@ -1,6 +1,6 @@
 # notion-api
 
-This is a Notion API client for Node.js. Right now, it uses a reverse-engineered version of their private API.
+This is a Notion API client for Node.js. Right now, it uses a reverse-engineered version of their private API (which _could_ break at any time — you have been warned).
 
 ## Installation
 
