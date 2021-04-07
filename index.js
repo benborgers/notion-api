@@ -216,6 +216,8 @@ class NotionDoc {
                 highlighted = prism.highlight(code, prism.languages[language], language)
             } catch{}
 
+            highlighted = highlighted.replace(/\n/g, '<br>')
+
             return `<pre><code class="language-${language}">${highlighted}</code></pre>`
         } else if(type === 'callout') {
             const icon = block.format.page_icon
