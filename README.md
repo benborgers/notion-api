@@ -28,6 +28,7 @@ console.log(await doc.title())
 - `.createdAt()` and `.updatedAt()` return epoch timestamps of these respective times for the document.
 - `.html()` returns fully-baked HTML for a Notion document.
     - Not all Notion blocks are supported yet, and the package will print console warnings for unsupported blocks and formatting options.
+    - Set `doc.downgradeHeadings = true` in order to change `h1` to `h2`, `h2` to `h3`, etc (useful for when the HTML is going into a page that has an `h1` title already).
 
 ## HTML Considerations
 
