@@ -185,7 +185,9 @@ class NotionDoc {
                 }
             }
 
-            return `<${el}>${this.#textArrayToHtml(block.properties?.title)}</${el}>${indented.join('')}`
+            const classDeclaration = block?.format?.block_color ? ` class="${this.#colorClass(block.format.block_color)}"` : ''
+
+            return `<${el} ${classDeclaration}>${this.#textArrayToHtml(block.properties?.title)}</${el}>${indented.join('')}`
         } else if(['numbered_list', 'bulleted_list'].includes(type)) {
             const el = {
                 'numbered_list': 'ol',
@@ -223,7 +225,7 @@ class NotionDoc {
             const icon = block.format.page_icon
             const src = icon.includes('http') ? this.#notionImageSrc(icon, block) : `https://emojicdn.elk.sh/${encodeURIComponent(icon)}`
 
-            return `<div class="callout"><img src="${src}"><p>${this.#textArrayToHtml(block?.properties?.title)}</p></div>`
+            return `<div class="callout${block?.format?.block_color ? ' ' + this.#colorClass(block.format.block_color) : ''}"><img src="${src}"><p>${this.#textArrayToHtml(block?.properties?.title)}</p></div>`
         } else if(type === 'quote') {
             return `<blockquote>${this.#textArrayToHtml(block?.properties?.title)}</blockquote>`
         } else if(type === 'divider') {
