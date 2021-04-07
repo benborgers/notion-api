@@ -12,5 +12,9 @@
     "katex": "^0.13.1",
     "node-fetch": "^2.6.1",
     "prismjs": "^1.23.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benborgers/notion-api.git"
   }
 }
