@@ -233,10 +233,12 @@ class NotionDoc {
         } else if(type === 'image') {
             return `<img src="${this.#notionImageSrc(block.format.display_source, block)}">`
         } else if(type === 'equation') {
-            return katex.renderToString(this.#textArrayToText(block?.properties?.title), {
+            const equation = katex.renderToString(this.#textArrayToText(block?.properties?.title), {
                 throwOnError: false,
                 displayMode: true
             })
+
+            return `<div class="block-equation">${equation}</div>`
         } else if(type === 'toggle') {
             await this.#load(block.content)
 

@@ -65,3 +65,4 @@ The `NotionDoc.html()` method (documented above) returns pre-built markup from a
 
 - Code blocks are highlighted with Prism.js. If the HTML contains a code block (you can detect this by the presence of the string `<pre><code`), you can add a [Prism.js theme of your choice](https://unpkg.com/browse/prism-themes@latest/themes/) to the HTML for syntax highlighting.
 - Inline and block-level equations are rendered using KaTeX. If the HTML contains an equation (you can detect this by the presence of the string `katex-html`, which is a class name), you should add [this stylesheet](https://unpkg.com/katex@latest/dist/katex.min.css).
+    - Block-level equations are wrapped in a div with class `.block-equation`.
