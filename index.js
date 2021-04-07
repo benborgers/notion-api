@@ -69,7 +69,7 @@ class NotionDoc {
         while(hasMoreChunks) {
             const cursor = lastChunk?.cursor || { 'stack':  [] }
 
-            const chunk = await this.#call('loadPageChunk', {
+            const chunk = await this.#call('loadCachedPageChunk', {
                 pageId: this.id,
                 limit: 100,
                 cursor: cursor,
