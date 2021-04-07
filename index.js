@@ -95,7 +95,7 @@ class NotionDoc {
     }
 
     #colorClass(string) {
-        const color = string.split('_')[0]
+        let color = string.split('_')[0]
         if(color === 'teal') color = 'green'
         const isBackground = string.includes('background')
         return `${isBackground ? 'background' : 'color'}-${color}`

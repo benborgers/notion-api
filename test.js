@@ -2,7 +2,7 @@ const fs = require('fs')
 
 const { NotionDoc } = require('./index')
 
-const doc = new NotionDoc('a2449a4a48884c49bd5225828d29b2ed')
+const doc = new NotionDoc('eb309b36485643068bb33cd3f2e8eef0')
 
 const main = async () => {
     // console.log('title', await doc.title())
