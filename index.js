@@ -20,6 +20,7 @@ const escapeHtml = text => text.replace(/</g, '&lt;')
 
 class NotionDoc {
     downgradeHeadings = false // Turns h1 to h2, etc
+    imageWidth = null
 
     #blocks = {}
 
@@ -109,7 +110,7 @@ class NotionDoc {
     }
 
     #notionImageSrc(url, block) {
-        return `https://www.notion.so/image/${encodeURIComponent(url)}?table=block&id=${block.id}`
+        return `https://www.notion.so/image/${encodeURIComponent(url)}?table=block&id=${block.id}&cache=v2${this.imageWidth ? `&width=${this.imageWidth}` : ''}`
     }
 
     #textArrayToText(pieces) {

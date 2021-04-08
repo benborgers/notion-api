@@ -2,7 +2,8 @@ const fs = require('fs')
 
 const { NotionDoc } = require('./index')
 
-const doc = new NotionDoc('c482739b-0448-4661-9caf-39f60088a11e')
+const doc = new NotionDoc('c482739b044846619caf39f60088a11e')
+doc.imageWidth = 2000
 
 const main = async () => {
     // console.log('title', await doc.title())
