@@ -13,3 +13,7 @@ Only actionable changes will be noted here, bug fixes or internal changes won't 
 ## 1.0.1
 
 - Change `\n` line breaks into `<br>` for code blocks.
+
+## 1.2.2
+
+- Use `<s>` instead of `<strike>`, since `<strike>` is deprecated.

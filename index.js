@@ -136,7 +136,7 @@ class NotionDoc {
                 } else if(modCode === '_') {
                     text = `<u>${text}</u>`
                 } else if(modCode === 's') {
-                    text = `<strike>${text}</strike>`
+                    text = `<s>${text}</s>`
                 } else if(modCode ===  'a') {
                     text = `<a href="${mod[1]}">${text}</a>`
                 } else if(modCode === 'h') {
