@@ -188,7 +188,7 @@ class NotionDoc {
 
             const classDeclaration = block?.format?.block_color ? ` class="${this.#colorClass(block.format.block_color)}"` : ''
 
-            return `<${el} ${classDeclaration}>${this.#textArrayToHtml(block.properties?.title)}</${el}>${indented.join('')}`
+            return `<${el}${classDeclaration}>${this.#textArrayToHtml(block.properties?.title)}</${el}>${indented.join('')}`
         } else if(['numbered_list', 'bulleted_list'].includes(type)) {
             const el = {
                 'numbered_list': 'ol',
